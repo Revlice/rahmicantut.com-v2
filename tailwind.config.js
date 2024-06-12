@@ -14,7 +14,7 @@ export default {
         jetbrains:['Jetbrains','sans-serif'],
       },
       screens: {
-        'sm': '400px',
+        'sm': '350px',
       }
     },
   },
