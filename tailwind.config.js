@@ -12,6 +12,9 @@ export default {
       },
       fontFamily:{
         jetbrains:['Jetbrains','sans-serif'],
+      },
+      screens: {
+        'sm': '400px',
       }
     },
   },
