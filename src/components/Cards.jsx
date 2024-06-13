@@ -1,7 +1,7 @@
+import {FaGithub} from "react-icons/fa";
 
 
-
-const Cards = ({title,icons})=>{
+const Cards = ({title,icons,url})=>{
 
     return(
         <div className="border-4 sm:mt-24  border-blue-300/30 justify-center rounded-lg items-center w-full flex-col p-10 shadow-blue-300/30  shadow-2xl" >
@@ -12,7 +12,9 @@ const Cards = ({title,icons})=>{
                 {title}
             </h2>
             <h3 className="text-5xl hover:opacity-70 cursor-pointer p-12  flex justify-center items-center sm:w-full">
-                {icons}
+                <a href={url} target="_blank" rel="noopener noreferrer">
+                    {icons}
+                </a>
             </h3>
         </div>
     )

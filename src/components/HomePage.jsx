@@ -1,13 +1,14 @@
 import { FaGithub } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { FaSpotify } from "react-icons/fa";
+import {motion} from "framer-motion";
 
 
 
 const HomePage = () => {
 
     return(
-        <div className=" h-screen min-w-full w-full lg:pl-10 flex justify-center items-center flex-col ">
+        <motion.div initial={{opacity:0,translateX:200}} animate={{opacity:1,translateX:0}} className=" h-screen min-w-full w-full lg:pl-10 flex justify-center items-center flex-col ">
             <div className="p-2  border-4 rounded-md bg-blue-300/5 border-blue-300/30 shadow-blue-300/30 shadow-2xl  ">
                 <h1 className="font-bold text-2xl lg:p-6 p-6">
                     Web Siteme,
@@ -33,18 +34,30 @@ const HomePage = () => {
 
                 </p>
                 <ul className="flex px-5">
-                    <li className="text-2xl m-1 cursor-pointer hover:opacity-50 "><FaGithub/></li>
-                    <li className="text-2xl m-1 cursor-pointer hover:opacity-50"><FiInstagram/></li>
-                    <li className="text-2xl m-1 cursor-pointer hover:opacity-50"><FaSpotify/></li>
+                    <li className="text-2xl m-1 cursor-pointer hover:opacity-50 ">
+                        <a href="https://github.com/Revlice" target="_blank" rel="noopener noreferrer">
+                            <FaGithub/>
+                        </a>
+
+
+                    </li>
+                    <li className="text-2xl m-1 cursor-pointer hover:opacity-50">
+                        <a href="https://www.instagram.com/rahmicantut/" target="_blank" rel="noopener noreferrer">
+                            <FiInstagram/>
+                        </a>
+                    </li>
+                    <li className="text-2xl m-1 cursor-pointer hover:opacity-50">
+                        <a href="https://open.spotify.com/user/aolhhguvxt6z7xvaw9ysk34gk?si=29717a5b5f4e48ce" target="_blank" rel="noopener noreferrer">
+                        <FaSpotify/>
+                        </a>
+                    </li>
                 </ul>
 
             </div>
 
 
-
-
-        </div>
-    )
+        </motion.div>
+)
 };
 
 export default HomePage;

@@ -1,5 +1,7 @@
 import logo from '../assets/IMG_3813.jpeg';
 import {NavLink,Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
+
 
 const Header = () => {
 
@@ -12,7 +14,7 @@ const Header = () => {
 
 
     return (
-        <div className="lg:pt-6 2xl:pl-32 lg:pb-8 relative bg-slate-950 w-full top-0 left-0 pt-8 flex flex-col lg:flex-row items-center justify-evenly mx-auto">
+        <motion.div className="lg:pt-6 2xl:pl-32 lg:pb-8 relative bg-slate-950 w-full top-0 left-0 pt-8 flex flex-col lg:flex-row items-center justify-evenly mx-auto">
             <div className="flex items-center gap-x-4">
                 <NavLink to="/">
                     <img className="w-24 sm:w-64 shadow-blue-300/30 shadow-2xl rounded-xl border-2 border-b-customCyan border-e-customYellow border-t-customYellow border-l-customCyan cursor-pointer" src={logo} alt="image" />
@@ -28,14 +30,14 @@ const Header = () => {
                     <li key={index}>
                         <NavLink
                             to={item.path}
-                            className={({isActive})=> isActive ? 'bg-slate-800 text-customCyan p-1 rounded text-black' : "text-white font-semibold m-2   lg:m-4 hover:cursor-pointer hover:opacity-80"}
+                            className={({isActive})=> isActive ? 'bg-slate-800 text-customCyan p-1 rounded ' : "text-white font-semibold m-2   lg:m-4 hover:cursor-pointer hover:opacity-80"}
                         >
                             {item.name}
                         </NavLink>
                     </li>
                 ))}
             </ul>
-        </div>
+        </motion.div>
     );
 };
 

@@ -4,7 +4,8 @@ import resim2 from '../assets/anilar/IMG_0172.jpeg';
 import resim3 from '../assets/anilar/IMG_2005.jpeg';
 import resim4 from '../assets/anilar/IMG_4698.jpeg';
 import resim5 from '../assets/anilar/IMG_0722.jpeg';
-import resim6 from '../assets/anilar/IMG_3040.jpeg'
+import resim6 from '../assets/anilar/IMG_3040.jpeg';
+import {motion} from 'framer-motion'
 
 const Anilar = ()=>{
 
@@ -23,7 +24,7 @@ const Anilar = ()=>{
             <Header/>
             <div className="flex justify-center flex-col items-center w-full bg-slate-950">
                 {anilar.map((item,index)=>(
-                    <div key={index} className="flex justify-center items-center w-full flex-col mt-32">
+                    <motion.div initial={{translateX:-150}} animate={{translateX:0}} key={index} className="flex justify-center items-center w-full flex-col mt-32">
                         <h1 className="text-white text-xl mb-12 border-2 border-blue-300/30 bg-blue-300/30 rounded-xl p-2"> {item.name} </h1>
                         <div>
                             <img className="w-96 rounded-lg" src={item.src} alt=""/>
@@ -31,7 +32,7 @@ const Anilar = ()=>{
                         <h6 className="text-gray-400 bg-white/10 w-auto h-auto p-4 px-7 text-base rounded-xl mt-12 ">
                             {item.aciklama}
                         </h6>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>
