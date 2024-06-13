@@ -1,9 +1,14 @@
 import logo from '../assets/IMG_3813.jpeg';
-import {NavLink,Link} from 'react-router-dom';
-import {motion} from 'framer-motion';
-
+import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { BottomSheet } from 'react-spring-bottom-sheet';
+import 'react-spring-bottom-sheet/dist/style.css';
+import { useEffect, useState } from "react";
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
+    const [open, setOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
     const elemanlar = [
         { name: "Ekipmanlar", path: "/ekipmanlar" },
@@ -11,7 +16,38 @@ const Header = () => {
         { name: "Müzikler", path: "/muzikler" }
     ];
 
+    const handleReSize = () => {
+        if (window.innerWidth < 1024) {
+            setIsMobile(true);
+        } else {
+            setIsMobile(false);
+            setOpen(false); // Ekran genişlediğinde bottom sheet'i kapat
+        }
+    };
 
+    useEffect(() => {
+        window.addEventListener('resize', handleReSize);
+        return () => {
+            window.removeEventListener('resize', handleReSize);
+        };
+    }, []);
+
+    const navbarItems = (
+        <ul className={`flex flex-col lg:flex-row ${isMobile ? 'bg-slate-900 text-center' : ''}`}>
+            {elemanlar.map((item, index) => (
+                <li key={index} className={`${isMobile ? 'm-2 p-2' : 'm-2 lg:m-4'}`}>
+                    <NavLink
+                        to={item.path}
+                        className={({ isActive }) =>
+                            isActive ? 'bg-slate-800 text-customCyan p-1 rounded'
+                                : `text-white font-semibold hover:cursor-pointer hover:opacity-80 ${isMobile ? 'block' : ''}`}
+                    >
+                        {item.name}
+                    </NavLink>
+                </li>
+            ))}
+        </ul>
+    );
 
     return (
         <motion.div className="lg:pt-6 2xl:pl-32 lg:pb-8 relative bg-slate-950 w-full top-0 left-0 pt-8 flex flex-col lg:flex-row items-center justify-evenly mx-auto">
@@ -25,18 +61,19 @@ const Header = () => {
                 </div>
             </div>
 
-            <ul className="flex flex-col lg:flex-row ">
-                {elemanlar.map((item, index) => (
-                    <li key={index}>
-                        <NavLink
-                            to={item.path}
-                            className={({isActive})=> isActive ? 'bg-slate-800 text-customCyan p-1 rounded ' : "text-white font-semibold m-2   lg:m-4 hover:cursor-pointer hover:opacity-80"}
-                        >
-                            {item.name}
-                        </NavLink>
-                    </li>
-                ))}
-            </ul>
+            {isMobile ? (
+                <button onClick={() => setOpen(true)} className="text-white font-semibold m-2 lg:m-4 hover:cursor-pointer hover:opacity-80">
+                    <FaBars />
+                </button>
+            ) : (
+                navbarItems
+            )}
+
+            <BottomSheet open={open} onDismiss={() => setOpen(false)}>
+                <div className="p-4 bg-slate-950">
+                    {navbarItems}
+                </div>
+            </BottomSheet>
         </motion.div>
     );
 };
