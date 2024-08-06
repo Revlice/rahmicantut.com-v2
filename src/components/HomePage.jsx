@@ -30,7 +30,7 @@ const HomePage = () => {
                     <hr className="border-blue-300/30 "/>
                     <br/>
 
-                    Bu sitedeki amaç hem kendi portfölyeme bir proje eklemek hemde benim hakkımda birkaç bilgi edinmen!
+                    Bu sitedeki amaç hem kendi portfölyeme bir proje eklemek hem de benim hakkımda birkaç bilgi edinmen!
 
                 </p>
                 <ul className="flex px-5">
