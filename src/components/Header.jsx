@@ -11,8 +11,9 @@ const Header = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
     const elemanlar = [
-        {name:'Projeler',path:"/projeler"},
+
         { name: "Ekipmanlar", path: "/ekipmanlar" },
+        {name:'Projeler',path:"/projeler"},
         { name: "Anılar", path: "/anilar" },
         { name: "Müzikler", path: "/muzikler" }
     ];
