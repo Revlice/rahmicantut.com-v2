@@ -3,6 +3,7 @@ import {motion} from "framer-motion";
 const Muzikler = ()=>{
 
     return(
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-slate-950 w-full h-screen">
             <Header/>
             <motion.div initial={{translateY:150}} animate={{translateY:0}} className="grid place-items-center sm:flex sm:flex-col bg-slate-950 w-full ">
@@ -33,6 +34,7 @@ const Muzikler = ()=>{
 
 
             </motion.div>
+        </div>
         </div>
 
     )

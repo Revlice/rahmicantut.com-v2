@@ -5,6 +5,7 @@ const Equipments = () => {
 
 
     return (
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-slate-950">
             <Header />
             <div className="w-full pt-8 flex flex-col justify-center items-center">
@@ -20,6 +21,7 @@ const Equipments = () => {
                     <Photos />
                 </div>
             </div>
+        </div>
         </div>
     );
 

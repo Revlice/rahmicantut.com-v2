@@ -19,7 +19,7 @@ const Anilar = ()=>{
     ]
 
     return(
-
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-slate-950 h-screen w-full ">
             <Header/>
             <div className="flex justify-center flex-col items-center w-full bg-slate-950">
@@ -35,6 +35,7 @@ const Anilar = ()=>{
                     </motion.div>
                 ))}
             </div>
+        </div>
         </div>
     )
 };
