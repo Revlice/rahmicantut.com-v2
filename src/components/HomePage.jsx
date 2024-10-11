@@ -18,7 +18,7 @@ const HomePage = () => {
                 </h1>
                 <p className="text-gray-300 cursor-text p-6 lg:p-6  ">
                     4 Ocak 2005'te Yalova'da dünyaya geldim.
-                    Yalova Üniversitesi İlk ve Acil Yardım(Paramedik) 2.sınıf öğrencisiyim.
+                    Sakarya Uygulamalı Bilimler Üniversitesi İlk ve Acil Yardım(Paramedik) 2.sınıf öğrencisiyim.
                     <br/>
                     Ayrıyetten 2.üniversite olarak Ankara Üniversitesi Web Tasarım ve Kodlama bölümünü okumaktayım.
                     <br/>
@@ -30,7 +30,7 @@ const HomePage = () => {
                     <hr className="border-blue-300/30 "/>
                     <br/>
 
-                    Bu sitedeki amaç hem kendi portfölyeme bir proje eklemek hem de benim hakkımda birkaç bilgi edinmen!
+                    Bu sitedeki amaç hem kendi portfölyeme bir proje eklemek hemde benim hakkımda birkaç bilgi edinmen!
 
                 </p>
                 <ul className="flex px-5">
