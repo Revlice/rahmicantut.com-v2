@@ -15,7 +15,7 @@ function Home() {
                 <div className="flex bg-slate-950 justify-center items-center flex-col text-white">
                     <div className="w-full flex justify-center items-center flex-col bg-slate-950 text-white overflow-hidden">
                         <HomePage />
-                        <ul className="w-full flex lg:flex-row sm:flex-col justify-center items-center mt-6">
+                        <ul className="w-full flex lg:flex-col xl:flex-row sm:flex-col justify-center items-center mt-6">
                             <li className="m-2 sm:m-4">
                                 <Cards icons={<FaGithub/>} title="Github" url="https://github.com/Revlice"/>
                             </li>

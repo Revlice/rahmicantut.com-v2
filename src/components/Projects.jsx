@@ -84,7 +84,7 @@ const Projects = () => {
             >
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-12 text-center">Projelerim</h1>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
+                <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 w-full max-w-7xl">
                     {projectData.map((project, index) => (
                         <motion.div
                             key={index}
