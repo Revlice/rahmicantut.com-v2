@@ -1,6 +1,8 @@
 import { FaGithub } from "react-icons/fa";
 import { FiInstagram } from "react-icons/fi";
 import { FaSpotify } from "react-icons/fa";
+import {FaLinkedin} from 'react-icons/fa';
+
 import {motion} from "framer-motion";
 
 
@@ -47,17 +49,25 @@ const HomePage = () => {
                         </a>
                     </li>
                     <li className="text-2xl m-1 cursor-pointer hover:opacity-50">
-                        <a href="https://open.spotify.com/user/aolhhguvxt6z7xvaw9ysk34gk?si=29717a5b5f4e48ce" target="_blank" rel="noopener noreferrer">
-                        <FaSpotify/>
+                        <a href="https://open.spotify.com/user/aolhhguvxt6z7xvaw9ysk34gk?si=29717a5b5f4e48ce"
+                           target="_blank" rel="noopener noreferrer">
+                            <FaSpotify/>
                         </a>
                     </li>
+                    <li className="text-2xl m-1 cursor-pointer hover:opacity-50">
+                        <a href="https://www.linkedin.com/in/rahmican-tut-37a165265/"
+                           target="_blank" rel="noopener noreferrer">
+                            <FaLinkedin/>
+                        </a>
+                    </li>
+
                 </ul>
 
             </div>
 
 
         </motion.div>
-)
+    )
 };
 
 export default HomePage;
