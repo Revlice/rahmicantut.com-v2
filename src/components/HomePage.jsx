@@ -20,7 +20,7 @@ const HomePage = () => {
                 </h1>
                 <p className="text-gray-300 cursor-text p-6 lg:p-6  ">
                     4 Ocak 2005'te Yalova'da dünyaya geldim.
-                    Sakarya Uygulamalı Bilimler Üniversitesi İlk ve Acil Yardım(Paramedik) 2.sınıf öğrencisiyim.
+                    Yalova Üniversitesi İlk ve Acil Yardım(Paramedik) 2.sınıf öğrencisiyim.
                     <br/>
                     Ayrıyetten 2.üniversite olarak Ankara Üniversitesi Web Tasarım ve Kodlama bölümünü okumaktayım.
                     <br/>
